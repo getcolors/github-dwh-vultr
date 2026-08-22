@@ -2,6 +2,7 @@ profile: github-dwh-vultr
 workdir: .colors
 
 control-plane-host: github-dwh.bigconfig.space
+analytics-host: analytics.github-dwh.bigconfig.space
 github-org: getcolors
 github-include-private: true
 github-resources:
@@ -18,6 +19,7 @@ clickhouse-raw-database: raw_github
 clickhouse-analytics-database: analytics
 clickhouse-marts-database: marts
 clickhouse-user: github_dwh
+lightdash-clickhouse-user: lightdash
 
 pocketbase-superuser-email: admin@bigconfig.space
 
