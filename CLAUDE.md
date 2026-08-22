@@ -2,7 +2,7 @@
 
 ## Repository
 
-Desired-state deployment of `getcolors/github-dwh` on one Vultr VM. ClickHouse, PocketBase, Caddy, the systemd dispatcher, and Blue/dlt/dbt all run on that host. `colors.yml` is source; `.colors/` is generated and contains local OpenTofu state. Never edit or delete it while the deployment exists.
+Desired-state deployment of `getcolors/github-dwh` on one Vultr VM. ClickHouse, PocketBase, Caddy, the systemd dispatcher, and Blue/dlt/dbt all run on that host. `colors.yml` is source; `.colors/` is generated. Desired state now targets the shared R2 backend (`github-dwh-vultr/tofu.tfstate`), but until `tofu init -migrate-state` has moved it, `.colors/` still holds the live local OpenTofu state. Never edit or delete it while the deployment exists.
 
 ## Commands
 

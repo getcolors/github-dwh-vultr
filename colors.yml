@@ -21,12 +21,25 @@ clickhouse-marts-database: marts
 clickhouse-user: github_dwh
 lightdash-clickhouse-user: lightdash
 
+# --- Lightdash object storage -----------------------------------------------
+# Dedicated R2 bucket; credentials are COLORS_PAR_LIGHTDASH_R2_ACCESS_KEY_ID
+# and COLORS_PAR_LIGHTDASH_R2_SECRET_ACCESS_KEY, scoped to this bucket only.
+lightdash-r2-bucket: github-dwh-lightdash
+lightdash-r2-endpoint: https://319271fed8bc6d2d9059362be1165f37.eu.r2.cloudflarestorage.com
+lightdash-r2-region: auto
+
 pocketbase-superuser-email: admin@bigconfig.space
 
 provider-compute: vultr
 provider-dns: cloudflare
-provider-backend: local
+provider-backend: r2
 compute-prevent-destroy: true
+
+# --- State backend ----------------------------------------------------------
+# Shared R2 bucket; <profile>/tofu.tfstate keeps this deployment isolated.
+# Credentials are COLORS_PAR_R2_ACCESS_KEY_ID / COLORS_PAR_R2_SECRET_ACCESS_KEY.
+r2-bucket: tofu-state-319271fed8bc6d2d9059362be1165f37-eu
+r2-endpoint: https://319271fed8bc6d2d9059362be1165f37.eu.r2.cloudflarestorage.com
 
 vultr-name: github-dwh-vultr
 vultr-region: ams
