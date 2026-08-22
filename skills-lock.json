@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "package-github-dwh-blue": {
+      "source": "getcolors/github-dwh",
+      "sourceType": "github",
+      "skillPath": "skills/package-github-dwh-blue/SKILL.md",
+      "computedHash": "ce19b63e617c5e8d7e4c81d42d92b48eb37e853a1e96971cdebe0c66ba071f79"
+    }
+  }
+}
