@@ -50,3 +50,6 @@ vultr-os-id: 2284
 # package uploads its public half to Vultr and installs it on this host.
 vultr-ssh-key-name: github-dwh-vultr
 ssh-private-key: .ssh/id_ed25519
+
+# Pending legacy local-state migration: refuse creation without established ownership.
+compute-require-existing-state: true
